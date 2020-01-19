@@ -7,7 +7,7 @@
 # Determines the required config migrations. Do not edit manually!
 config-version: 2
 # The initial debugging state of the plugin.
-debug: false
+debug: true
 # Additional debugging options.
 # - 'log-all-events': Logs all events.
 # - 'print-listeners': Prints the registered listeners for the first call of
@@ -44,13 +44,13 @@ save-instantly: true
 # Whether the plugin shall periodically verify that all shopkeepers that should
 # currently be spawned are actually present. This should only be enabled if you
 # have problems with shopkeepers disappearing.
-enable-spawn-verifier: false
+enable-spawn-verifier: true
 # If enabled, Shopkeepers tries to bypass other plugins which deny mob spawning
 # (ex. land protection plugins).
 bypass-spawn-blocking: true
 # If enabled, Shopkeepers takes into account whether other plugins deny
 # interaction with the shopkeepers.
-check-shop-interaction-result: false
+check-shop-interaction-result: true
 
 # If enabled, players will only be able to place shopkeepers where they have
 # permission from WorldGuard to build or where the 'allow-shop' flag is set.
@@ -84,7 +84,7 @@ shop-creation-item: VILLAGER_SPAWN_EGG
 prevent-shop-creation-item-regular-usage: false
 # Whether deleting (or destroying) a player shopkeeper returns (drops) the
 # shop-creation item.
-deleting-player-shop-returns-creation-item: false
+deleting-player-shop-returns-creation-item: true
 
 # Whether to allow creating player shops with the /shopkeeper command.
 create-player-shop-with-command: false
@@ -101,7 +101,7 @@ max-shops-per-player: 0
 # A list of permission nodes that can be used to explicitly set the maximum
 # number of shops a specific player or group of players can have. Use the
 # shopkeeper.maxshops.<count> permission node pattern to use this feature.
-max-shops-perm-options: 5,15,25
+max-shops-perm-options: 5,15,25,35,45,55
 
 # Whether to protect player shop chests from being accessed or broken. Usually
 # it is recommended to keep this enabled.
@@ -208,12 +208,12 @@ silence-living-shop-entities: true
 show-nameplates: true
 # Whether to always show nameplates. If disabled, nameplates will only be shown
 # when looking directly at the shopkeeper.
-always-show-nameplates: false
+always-show-nameplates: true
 # The prefix for nameplates (to help distinguish them from players).
-nameplate-prefix: "&a"
+nameplate-prefix: "&a&l"
 
 # Whether to allow citizen (npc) shops. Requires the plugin Citizens.
-enable-citizen-shops: false
+enable-citizen-shops: true
 
 # Whether to allow sign shops.
 enable-sign-shops: true
@@ -241,7 +241,7 @@ name-regex: "[A-Za-z0-9 ]{3,25}"
 naming-of-player-shops-via-item: false
 # Whether renaming of player npc (citizen) shopkeepers is allowed. By default
 # those shopkeepers will be named after the player who owns the shop.
-allow-renaming-of-player-npc-shops: false
+allow-renaming-of-player-npc-shops: true
 
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 # Editor Menu
@@ -275,11 +275,11 @@ delete-item: BONE
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 
 # Whether to prevent trading with non-shopkeeper villagers.
-disable-other-villagers: false
+disable-other-villagers: true
 # Whether to block regular non-shopkeeper villagers from spawning. Villagers
 # spawned by plugins, spawn eggs, mob spawners or by curing zombie villagers
 # are however not affected by this.
-block-villager-spawns: false
+block-villager-spawns: true
 # Whether to prevent curing of zombie villagers.
 disable-zombie-villager-curing: false
 # Whether non-shopkeeper villagers can be hired.
@@ -329,7 +329,7 @@ use-strict-item-comparison: false
 # Whether all shopkeeper purchases shall be logged to csv files in the plugin
 # folder. Note: This might currently not properly work for admin shops, so
 # don't rely on the correctness of the logged purchases for those!
-enable-purchase-logging: false
+enable-purchase-logging: true
 # Whether to increment minecraft's talked-to-villager and traded-with-villager
 # statistics whenever a player opens the trading menu and trades with a
 # shopkeeper.
@@ -435,10 +435,10 @@ msg-button-sitting-lore:
 msg-button-cat-variant: "&aChoose cat variant"
 msg-button-cat-variant-lore:
 - "Changes the cat's look"
-msg-button-collar-color: "&aChoose collar color"
+msg-button-collar-color: "&aChoose collar colour"
 msg-button-collar-color-lore:
 - "Changes the mob's"
-- "collar color"
+- "collar colour"
 msg-button-wolf-angry: "&aToggle angry wolf"
 msg-button-wolf-angry-lore:
 - "Toggles the wolf's"
@@ -447,25 +447,25 @@ msg-button-carrying-chest: "&aToggle carrying chest"
 msg-button-carrying-chest-lore:
 - "Toggles whether the mob"
 - "is carrying a chest"
-msg-button-horse-color: "&aChoose horse color"
+msg-button-horse-color: "&aChoose horse colour"
 msg-button-horse-color-lore:
-- "Changes the color"
+- "Changes the colour"
 - "of the horse"
 msg-button-horse-style: "&aChoose horse style"
 msg-button-horse-style-lore:
 - "Changes the coat pattern"
 - "of the horse"
-msg-button-horse-armor: "&aChoose horse armor"
+msg-button-horse-armor: "&aChoose horse armour"
 msg-button-horse-armor-lore:
-- "Changes the armor"
+- "Changes the armour"
 - "of the horse"
 msg-button-llama-variant: "&aChoose llama variant"
 msg-button-llama-variant-lore:
 - "Changes the llama's look"
-msg-button-llama-carpet-color: "&aLlama carpet color"
+msg-button-llama-carpet-color: "&aLlama carpet colour"
 msg-button-llama-carpet-color-lore:
 - "Changes the llama's"
-- "carpet color"
+- "carpet colour"
 msg-button-creeper-charged: "&aToggle charged creeper"
 msg-button-creeper-charged-lore:
 - "Toggles the creeper's"
@@ -494,10 +494,10 @@ msg-button-parrot-variant-lore:
 msg-button-pig-saddle: "&aToggle pig saddle"
 msg-button-pig-saddle-lore:
 - "Toggles the pig's saddle"
-msg-button-sheep-color: "&aChoose sheep color"
+msg-button-sheep-color: "&aChoose sheep colour"
 msg-button-sheep-color-lore:
 - "Changes the sheep's"
-- "wool color"
+- "wool colour"
 msg-button-sheep-sheared: "&aToggle sheared sheep"
 msg-button-sheep-sheared-lore:
 - "Toggles the sheep's"
