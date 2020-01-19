@@ -140,8 +140,8 @@ public class SKShopkeepersPlugin extends JavaPlugin implements ShopkeepersPlugin
 	private boolean isOutdatedServerVersion() {
 		// validate that this server is running a minimum required version:
 		// TODO add proper version parsing
-		/*String cbVersion = Utils.getServerCBVersion(); // eg. 1_13_R2
-		String bukkitVersion = Bukkit.getBukkitVersion(); // eg. 1.13.1-R0.1-SNAPSHOT*/
+		String cbVersion = Utils.getServerCBVersion(); // eg. 1_13_R2
+		String bukkitVersion = Bukkit.getBukkitVersion(); // eg. 1.13.1-R0.1-SNAPSHOT
 		try {
 			// this has been added with the recent changes to PlayerBedEnterEvent: TODO outdated
 			Class.forName("org.bukkit.event.player.PlayerBedEnterEvent$BedEnterResult");
