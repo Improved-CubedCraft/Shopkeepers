@@ -90,7 +90,7 @@ public class Settings {
 	 * General Settings
 	 */
 	public static int configVersion = 2;
-	public static boolean debug = false;
+	public static boolean debug = true;
 	// See DebugOptions for all available options.
 	public static List<String> debugOptions = new ArrayList<>(0);
 	public static boolean enableMetrics = true;
@@ -104,9 +104,9 @@ public class Settings {
 	/*
 	 * Plugin Compatibility
 	 */
-	public static boolean enableSpawnVerifier = false;
+	public static boolean enableSpawnVerifier = true;
 	public static boolean bypassSpawnBlocking = true;
-	public static boolean checkShopInteractionResult = false;
+	public static boolean checkShopInteractionResult = true;
 
 	public static boolean enableWorldGuardRestrictions = false;
 	public static boolean requireWorldGuardAllowShopFlag = false;
@@ -119,14 +119,14 @@ public class Settings {
 	 */
 	public static ItemData shopCreationItem = new ItemData(Material.VILLAGER_SPAWN_EGG);
 	public static boolean preventShopCreationItemRegularUsage = false;
-	public static boolean deletingPlayerShopReturnsCreationItem = false;
+	public static boolean deletingPlayerShopReturnsCreationItem = true;
 
 	public static boolean createPlayerShopWithCommand = false;
 
 	public static boolean requireChestRecentlyPlaced = true;
 	public static int maxChestDistance = 15;
 	public static int maxShopsPerPlayer = 0;
-	public static String maxShopsPermOptions = "10,15,25";
+	public static String maxShopsPermOptions = "10,15,25,35,45,55";
 
 	public static boolean protectChests = true;
 	public static boolean preventItemMovement = true;
@@ -204,10 +204,10 @@ public class Settings {
 	public static boolean silenceLivingShopEntities = true;
 
 	public static boolean showNameplates = true;
-	public static boolean alwaysShowNameplates = false;
-	public static String nameplatePrefix = "&a";
+	public static boolean alwaysShowNameplates = true;
+	public static String nameplatePrefix = "&a&l";
 
-	public static boolean enableCitizenShops = false;
+	public static boolean enableCitizenShops = true;
 
 	public static boolean enableSignShops = true;
 	public static boolean enableSignPostShops = true;
@@ -218,7 +218,7 @@ public class Settings {
 	 */
 	public static String nameRegex = "[A-Za-z0-9 ]{3,32}";
 	public static boolean namingOfPlayerShopsViaItem = false;
-	public static boolean allowRenamingOfPlayerNpcShops = false;
+	public static boolean allowRenamingOfPlayerNpcShops = true;
 
 	/*
 	 * Editor Menu
@@ -240,8 +240,8 @@ public class Settings {
 	/*
 	 * Non-shopkeeper villagers
 	 */
-	public static boolean disableOtherVillagers = false;
-	public static boolean blockVillagerSpawns = false;
+	public static boolean disableOtherVillagers = true;
+	public static boolean blockVillagerSpawns = true;
 	public static boolean disableZombieVillagerCuring = false;
 	public static boolean hireOtherVillagers = false;
 
@@ -263,7 +263,7 @@ public class Settings {
 	public static boolean preventTradingWithOwnShop = true;
 	public static boolean preventTradingWhileOwnerIsOnline = false;
 	public static boolean useStrictItemComparison = false;
-	public static boolean enablePurchaseLogging = false;
+	public static boolean enablePurchaseLogging = true;
 	public static boolean incrementVillagerStatistics = false;
 
 	public static int taxRate = 0;
@@ -336,22 +336,22 @@ public class Settings {
 	public static List<String> msgButtonSittingLore = Arrays.asList("Toggles the mob's", "sitting pose");
 	public static String msgButtonCatVariant = "&aChoose cat variant";
 	public static List<String> msgButtonCatVariantLore = Arrays.asList("Changes the cat's look");
-	public static String msgButtonCollarColor = "&aChoose collar color";
-	public static List<String> msgButtonCollarColorLore = Arrays.asList("Changes the mob's", "collar color");
+	public static String msgButtonCollarColor = "&aChoose collar colour";
+	public static List<String> msgButtonCollarColorLore = Arrays.asList("Changes the mob's", "collar colour");
 	public static String msgButtonWolfAngry = "&aToggle angry wolf";
 	public static List<String> msgButtonWolfAngryLore = Arrays.asList("Toggles the wolf's", "angry state");
 	public static String msgButtonCarryingChest = "&aToggle carrying chest";
 	public static List<String> msgButtonCarryingChestLore = Arrays.asList("Toggles whether the mob", "is carrying a chest");
-	public static String msgButtonHorseColor = "&aChoose horse color";
-	public static List<String> msgButtonHorseColorLore = Arrays.asList("Changes the color", "of the horse");
+	public static String msgButtonHorseColor = "&aChoose horse colour";
+	public static List<String> msgButtonHorseColorLore = Arrays.asList("Changes the colour", "of the horse");
 	public static String msgButtonHorseStyle = "&aChoose horse style";
 	public static List<String> msgButtonHorseStyleLore = Arrays.asList("Changes the coat pattern", "of the horse");
-	public static String msgButtonHorseArmor = "&aChoose horse armor";
-	public static List<String> msgButtonHorseArmorLore = Arrays.asList("Changes the armor", "of the horse");
+	public static String msgButtonHorseArmor = "&aChoose horse armour";
+	public static List<String> msgButtonHorseArmorLore = Arrays.asList("Changes the armour", "of the horse");
 	public static String msgButtonLlamaVariant = "&aChoose llama variant";
 	public static List<String> msgButtonLlamaVariantLore = Arrays.asList("Changes the llama's look");
-	public static String msgButtonLlamaCarpetColor = "&aLlama carpet color";
-	public static List<String> msgButtonLlamaCarpetColorLore = Arrays.asList("Changes the llama's", "carpet color");
+	public static String msgButtonLlamaCarpetColor = "&aLlama carpet colour";
+	public static List<String> msgButtonLlamaCarpetColorLore = Arrays.asList("Changes the llama's", "carpet colour");
 	public static String msgButtonCreeperCharged = "&aToggle charged creeper";
 	public static List<String> msgButtonCreeperChargedLore = Arrays.asList("Toggles the creeper's", "charged state");
 	public static String msgButtonFoxVariant = "&aChoose fox variant";
@@ -368,8 +368,8 @@ public class Settings {
 	public static List<String> msgButtonParrotVariantLore = Arrays.asList("Changes the parrot's look");
 	public static String msgButtonPigSaddle = "&aToggle pig saddle";
 	public static List<String> msgButtonPigSaddleLore = Arrays.asList("Toggles the pig's saddle");
-	public static String msgButtonSheepColor = "&aChoose sheep color";
-	public static List<String> msgButtonSheepColorLore = Arrays.asList("Changes the sheep's", "wool color");
+	public static String msgButtonSheepColor = "&aChoose sheep colour";
+	public static List<String> msgButtonSheepColorLore = Arrays.asList("Changes the sheep's", "wool colour");
 	public static String msgButtonSheepSheared = "&aToggle sheared sheep";
 	public static List<String> msgButtonSheepShearedLore = Arrays.asList("Toggles the sheep's", "sheared state");
 	public static String msgButtonVillagerProfession = "&aChoose villager profession";
